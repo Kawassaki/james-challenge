@@ -37,16 +37,15 @@ If you want to take a look to the template of this application [click here](http
 
   I have used Github pages to deply this application and you're able to take a [look here](https://kawassaki.github.io/james-challenge/dashboard) to see that
 
-  ### Instructions to deploy
+  ### Instructions to deploy it
   #### To deploy the application on GitHub Pages follow the instructions below
 
-  - At the same terminal that we used on previous steps, run this command `npm install -g angular-cli-ghpages` to install the github page dependence;
+  - At the same terminal that we used on previous steps, run this command `npm install -g angular-cli-ghpages` to install the Github Page tool;
 
   - Now run `ng build --prod --base-href https://kawassaki.github.io/james-challenge/` to make this application deployable;
 
-  - Finally, run `ngh — dir=dist/james-challenge` to deploy on Github Pages all your changes
+  - Finally, run `ngh --dir=dist/james-challenge` to deploy on Github Pages all your changes
 
-  That's it!
- 
+  ### That's it!
 
 By: Felipe Kawassaki :wave: [Get in touch!](https://www.linkedin.com/in/felipe-kawassaki-335697118/)
