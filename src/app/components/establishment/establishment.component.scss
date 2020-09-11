@@ -1,10 +1,10 @@
 section {
   padding: 0 15%;
+
   form {
     padding: 30px;
     margin-top: 40px;
     background-color: #ffffff;
-    max-height: 560px;
     border-radius: 5px;
 
     img {
@@ -88,11 +88,13 @@ section {
   .mt-10 {
     margin-top: 10px;
   }
-  .mt-34 {
-    margin-top: 34px;
+  .mt-30 {
+    margin-top: 30px;
   }
   .form-control {
     background-color: #f8f9fd;
+    height: calc(1.5em + 1rem + 2px);
+    font-size: 13px;
   }
   .checkboxCustom{
     width: 20px;
