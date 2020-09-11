@@ -1,0 +1,15 @@
+<div>
+  <section *ngFor="let establishment of establishments">
+    <div (click)="toDetails(establishment.id)">
+      <img src={{establishment.picture}}/>
+      <div>
+        <strong>{{establishment.name}}
+          <span>{{establishment.id}}</span>
+        </strong>
+        <p>{{establishment.address}}</p>
+      </div>
+      <mat-icon class="exit-custom">keyboard_arrow_right</mat-icon>
+    </div>
+  </section>
+</div>
+

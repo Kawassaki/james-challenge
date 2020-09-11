@@ -1,0 +1,108 @@
+section {
+  padding: 0 15%;
+  form {
+    padding: 30px;
+    margin-top: 40px;
+    background-color: #ffffff;
+    max-height: 560px;
+    border-radius: 5px;
+
+    img {
+      width: 74px;
+      border-radius: 5px;
+    }
+
+    header {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+
+      aside {
+        padding: 0 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        h1 {
+          font-size: 21px;
+          color: #4C5164;
+        }
+        > p {
+          font-size: 14px;
+          color: #81879C;
+          margin: 0;
+        }
+      }
+    }
+    label {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 15px;
+      font-size: 13px;
+      width: 100%;
+    }
+    button {
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 15px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: #FFFFFF;
+      text-align: center;
+      background: #78dfc0;
+      border-radius: 100px;
+      padding: 15px;
+      width: 100%;
+      outline: none;
+      border: none;
+      margin-top: 25px;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #28CC9B;
+      }
+    }
+  }
+
+  .titleDivider {
+    h2 {
+      font-size: 16px;
+      color: #4C5164;
+      padding: 20px 0;
+      border-bottom: 1px solid #E6E8F0;
+    }
+  }
+  .back {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    margin-right: 20px;
+  }
+  .spacing{
+    margin: 10px 0;
+  }
+  .mt-10 {
+    margin-top: 10px;
+  }
+  .mt-34 {
+    margin-top: 34px;
+  }
+  .form-control {
+    background-color: #f8f9fd;
+  }
+  .checkboxCustom{
+    width: 20px;
+    height: 20px;
+  }
+  .numberCustom{
+    width: 50%;
+  }
+  .customSelect{
+    font-size: 13px;
+    background-color: #f8f9fd;
+  }
+}
