@@ -10,8 +10,6 @@ This repo was build to resolve the challenge for a position as Frontend Develope
 
 ## :rocket: Technologies
 
-This project was build with the following techs:
-
 - This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
 
