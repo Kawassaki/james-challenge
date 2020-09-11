@@ -12,6 +12,7 @@ import { EstablishmentService } from './service/establishment.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxMaskModule } from 'ngx-mask'
+import { ToastService } from './service/snackbar.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { NgxMaskModule } from 'ngx-mask'
     NgbModule,
     NgxMaskModule.forRoot(),
   ],
-  providers: [ EstablishmentService ],
+  providers: [ EstablishmentService, ToastService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

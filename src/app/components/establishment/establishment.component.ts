@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Establishment } from 'src/app/models/establishment';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ToastService } from 'src/app/service/snackbar.service';
 
 @Component({
   selector: 'app-establishment',
@@ -9,8 +10,11 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./establishment.component.scss']
 })
 export class EstablishmentComponent implements OnInit {
+  isTemplate(toast) { return toast.textOrTpl instanceof TemplateRef; }
+
   establishmentsStorage = (JSON.parse(localStorage.getItem("establishments")) as Establishment[]);
   public establishment: Establishment;
+
   public establishmentForm = new FormGroup({
     name: new FormControl(null),
     city: new FormControl(null),
@@ -28,6 +32,7 @@ export class EstablishmentComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
+    public toastService: ToastService
   ) { }
 
   ngOnInit(): void {
@@ -67,5 +72,7 @@ export class EstablishmentComponent implements OnInit {
         )
       )
     );
+    this.toastService.show('Salvo com sucesso!', { classname: 'bg-success text-light toaster', delay: 1000 });
   }
+
 }
