@@ -33,7 +33,7 @@ If you want to take a look to the template of this application [click here](http
 
 ## Deploy this app (GitHub Pages)
 
-  I have used Github pages to deply this application and you're able to take a [look here](https://kawassaki.github.io/james-challenge/dashboard) to see that
+  I have used Github pages to deploy this application and you're able to take a [look here](https://kawassaki.github.io/james-challenge/dashboard) to see that
 
   ### Instructions to deploy it
   #### To deploy the application on GitHub Pages follow the instructions below
