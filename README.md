@@ -44,6 +44,10 @@ If you want to take a look to the template of this application [click here](http
 
   - Finally, run `ngh --dir=dist/james-challenge` to deploy on Github Pages all your changes
 
-  ### That's it!
+  ## Running Tests using Karma + Jasmine
+  - To run all tests run the `ng test` to see the assertions
+  - If you want to check about the coverage out of these test run `ng test --coverage` and than open `./coverage/james/index` on your browser to.
+
+  ## That's it!
 
 By: Felipe Kawassaki :wave: [Get in touch!](https://www.linkedin.com/in/felipe-kawassaki-335697118/)
