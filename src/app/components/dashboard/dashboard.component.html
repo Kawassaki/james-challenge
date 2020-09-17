@@ -1,12 +1,12 @@
 <div>
-  <section *ngFor="let establishment of establishments">
-    <div (click)="toDetails(establishment.id)">
-      <img src={{establishment.picture}}/>
+  <section *ngFor="let establishment of establishments; index as index ">
+    <div (click)="toDetails(establishment.id)" class="card">
+      <img src={{establishment.picture}} id="img-card"/>
       <div>
-        <strong>{{establishment.name}}
-          <span>{{establishment.id}}</span>
+        <strong id="establishmentName">{{establishment.name}}
+          <span id="establishmentId">{{establishment.id}}</span>
         </strong>
-        <p>{{establishment.address}}</p>
+        <p id="establishmentAddress">{{establishment.address}}</p>
       </div>
       <mat-icon class="exit-custom">keyboard_arrow_right</mat-icon>
     </div>

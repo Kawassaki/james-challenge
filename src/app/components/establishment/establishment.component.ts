@@ -10,7 +10,6 @@ import { ToastService } from 'src/app/service/snackbar.service';
   styleUrls: ['./establishment.component.scss']
 })
 export class EstablishmentComponent implements OnInit {
-  isTemplate(toast) { return toast.textOrTpl instanceof TemplateRef; }
 
   establishmentsStorage = (JSON.parse(localStorage.getItem("establishments")) as Establishment[]);
   public establishment: Establishment;
@@ -36,23 +35,22 @@ export class EstablishmentComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.establishment =
-    this.establishmentsStorage
-      .find(
-        (item) => item.id === this.activatedRoute.snapshot.paramMap.get("id")
-      );
+    this.establishment = this.establishmentsStorage?.find(
+      (item) => item.id === this.activatedRoute.snapshot.paramMap.get("id")
+    );
+
     this.establishmentForm.setValue({
-      name: this.establishment.name || null,
-      city: this.establishment.city || null,
-      address: this.establishment.address || null,
-      account: this.establishment.account || null,
-      bank: this.establishment.bank || null,
-      cnpj: this.establishment.cnpj || null,
-      accountNumber: this.establishment.accountNumber || null,
-      accountNumberVerify: this.establishment.accountNumberVerify || null,
-      agencyNumber: this.establishment.agencyNumber || null,
-      agencyNumberVerify: this.establishment.agencyNumberVerify || null,
-      automaticWithdraw: this.establishment.automaticWithdraw || null,
+      name: this.establishment?.name || null,
+      city: this.establishment?.city || null,
+      address: this.establishment?.address || null,
+      account: this.establishment?.account || null,
+      bank: this.establishment?.bank || null,
+      cnpj: this.establishment?.cnpj || null,
+      accountNumber: this.establishment?.accountNumber || null,
+      accountNumberVerify: this.establishment?.accountNumberVerify || null,
+      agencyNumber: this.establishment?.agencyNumber || null,
+      agencyNumberVerify: this.establishment?.agencyNumberVerify || null,
+      automaticWithdraw: this.establishment?.automaticWithdraw || null,
     });
   }
 
@@ -75,4 +73,5 @@ export class EstablishmentComponent implements OnInit {
     this.toastService.show('Salvo com sucesso!', { classname: 'bg-success text-light toaster', delay: 1000 });
   }
 
+  isTemplate(toast) { return toast.textOrTpl instanceof TemplateRef; }
 }

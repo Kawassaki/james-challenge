@@ -15,10 +15,10 @@
       <ng-template #text>{{ toast.textOrTpl }}</ng-template>
     </ngb-toast>
       <mat-icon class="back" (click)="back()">keyboard_backspace</mat-icon>
-      <img src={{establishment.picture}}/>
+      <img src={{establishment?.picture}}/>
       <aside>
         <h1>{{establishmentForm.get('name').value}}</h1>
-        <p>ID: {{establishment.id}}</p>
+        <p>ID: {{establishment?.id}}</p>
       </aside>
     </header>
     <div class="row">

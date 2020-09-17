@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from './routes/app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +20,6 @@ import { ToastService } from './service/snackbar.service';
     DashboardComponent,
     EstablishmentComponent,
     HeaderComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -31,8 +30,10 @@ import { ToastService } from './service/snackbar.service';
     HttpClientModule,
     NgbModule,
     NgxMaskModule.forRoot(),
+    MatIconModule
   ],
   providers: [ EstablishmentService, ToastService ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
