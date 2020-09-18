@@ -2,7 +2,7 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Establishment } from 'src/app/models/establishment';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ToastService } from 'src/app/service/snackbar.service';
+import { SnackbarService } from 'src/app/service/snackbar/snackbar.service';
 
 @Component({
   selector: 'app-establishment',
@@ -31,7 +31,7 @@ export class EstablishmentComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    public toastService: ToastService
+    public snackbarService: SnackbarService
   ) { }
 
   ngOnInit(): void {
@@ -70,8 +70,8 @@ export class EstablishmentComponent implements OnInit {
         )
       )
     );
-    this.toastService.show('Salvo com sucesso!', { classname: 'bg-success text-light toaster', delay: 1000 });
+    this.snackbarService.show('Salvo com sucesso!', { classname: 'bg-success text-light toaster', delay: 1000 });
   }
 
-  isTemplate(toast) { return toast.textOrTpl instanceof TemplateRef; }
+  isTemplate(snackbar) { return snackbar?.textOrTpl instanceof TemplateRef; }
 }

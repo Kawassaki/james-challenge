@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Establishment } from 'src/app/models/establishment';
-import { EstablishmentService } from 'src/app/service/establishment.service';
+import { EstablishmentService } from 'src/app/service/establishment/establishment.service';
 import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({

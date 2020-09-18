@@ -8,11 +8,11 @@ import { EstablishmentComponent } from './components/establishment/establishment
 import { HeaderComponent } from './components/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { EstablishmentService } from './service/establishment.service';
+import { EstablishmentService } from './service/establishment/establishment.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxMaskModule } from 'ngx-mask'
-import { ToastService } from './service/snackbar.service';
+import { SnackbarService } from './service/snackbar/snackbar.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { ToastService } from './service/snackbar.service';
     NgxMaskModule.forRoot(),
     MatIconModule
   ],
-  providers: [ EstablishmentService, ToastService ],
+  providers: [ EstablishmentService, SnackbarService ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
