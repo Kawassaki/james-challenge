@@ -9,6 +9,6 @@ export class SnackbarService {
   }
 
   remove(toast) {
-    this.snackbars = this.snackbars.filter(t => t !== toast);
+    this.snackbars = this.snackbars.filter(({textOrTpl}) => textOrTpl !== toast.textOrTpl);
   }
 }

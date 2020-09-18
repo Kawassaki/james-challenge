@@ -20,9 +20,9 @@ describe('EstablishmentService', () => {
 
   it('should remove a snackbar', () => {
     let snackToRemove = { textOrTpl: 'Test snackbar' };
+    snackbarService.show(snackToRemove.textOrTpl);
     snackbarService.remove(snackToRemove);
-    expect(snackbarService.snackbars.find(t => t !== snackToRemove))
-      .toBeUndefined('Unexpected value');
+    expect(snackbarService.snackbars.length).toEqual(0, 'Unexpected length');
   });
 
 });
